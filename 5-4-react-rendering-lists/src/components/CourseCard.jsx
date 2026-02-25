@@ -2,6 +2,8 @@
 import TaskItem from "./TaskItem";
 
 export default function CourseCard({ course, index, onMutateCourse }) {
+  const hasTasks = course.tasks.length > 0;
+  const allDone = hasTasks && course.tasks.every(t => t.isDone);
   /* =========================================================
      TASK 4 — Interactivity (Toggle + Delete ONLY)
      ---------------------------------------------------------
@@ -30,6 +32,7 @@ export default function CourseCard({ course, index, onMutateCourse }) {
             - course has tasks AND
             - all tasks are done
             Use logical && */}
+            {allDone && <span className="badge">All caught up</span>}
       </header>
 
       <section className="tasksSection">

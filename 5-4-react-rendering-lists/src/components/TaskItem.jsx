@@ -12,6 +12,7 @@ export default function TaskItem({ task, onToggle, onDelete }) {
         {/* TODO (TASK 3): Show <DueBadge /> ONLY when task is NOT done (&&)
             Example:
               {!task.isDone && <DueBadge dueDate={task.dueDate} />} */}
+              {!task.isDone && <DueBadge dueDate={task.dueDate} />}
 
         <span className="title">{task.title}</span>
         {/* TODO (TASK 2): Display the task title
